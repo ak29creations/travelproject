@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body style="background-image: url('https://news.emory.edu/features/2019/12/research-funding/assets/A5jbR3AB6A/chapter-page_l-2560x1440.jpeg');">
+<center><br>
+<h2>Login</h2><br>
+    {% for msg in messages%}
+    <h3 style="color:red">{{msg}}</h3>
+    {% endfor %}
+<form method="post" action="login">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter Username"><br><br>
+    <input type="password" name="password" placeholder="Enter Password"><br><br>
+    <input type="submit">
+
+</form>
+</center>
+</body>
+</html>
